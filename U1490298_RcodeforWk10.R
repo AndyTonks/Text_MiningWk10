@@ -350,6 +350,7 @@ LDAclust<-dbscan(LDAdtm,0.4,MinPts=5,method="hybrid")
 plot(LDAclust$cluster)
 
 #Hierarchical cluster
+LDAdist<-dist(LDAdtm, method = "euclidean", diag = FALSE, upper = FALSE, p = 2)
 LDAhclust<-hclust(LDAdist,method="ward.D",members=NULL)
 plot(LDAhclust,labels=FALSE)
 
