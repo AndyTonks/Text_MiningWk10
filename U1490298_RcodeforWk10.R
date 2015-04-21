@@ -365,3 +365,8 @@ Kclust$withinss
 plot(Kclust$cluster)
 plot(Kclust$size)
 hist(Kclust$cluster)
+
+#write csv files out for processing in WEKA
+LDAmatrix<-as.data.frame(as.matrix(LDAdtm))
+ write.csv(LDAmatrix,file="LDAmatrix.csv")
+write.csv(justtopics,file="justtopics.csv")
